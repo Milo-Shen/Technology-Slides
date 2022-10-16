@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7158d125-485f-48ee-833f-008cfeb032f2" name="Changes" comment="feat: add the basic markdown">
+      <change afterPath="$PROJECT_DIR$/../Typescript Best Practices/src/Lookup type + generics + keyof /main.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="elxxg5dd" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/../Typescript Best Practices/package.json" />
+  </component>
+  <component name="ProjectId" id="24EBLMPvn5skgWnsSRiXOXlbnsB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/sllimen/Desktop/WorkStation/Technology-Slides/Typescript",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/sllimen/Desktop/WorkStation/Technology-Slides/Typescript Best Practices/node_modules/prettier",
+    "ts.external.directory.path": "/Users/sllimen/Desktop/WorkStation/Technology-Slides/Typescript Best Practices/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../Typescript Best Practices/src" />
+      <recent name="$PROJECT_DIR$/../Typescript Best Practices" />
+      <recent name="$PROJECT_DIR$/../Typescript Best Practices/Annotation" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$ Best Practices/src/Union Type/main.js" working-dir="$PROJECT_DIR$ Best Practices/src/Union Type">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7158d125-485f-48ee-833f-008cfeb032f2" name="Changes" comment="" />
+      <created>1643185808427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643185808427</updated>
+      <workItem from="1643185810051" duration="867000" />
+      <workItem from="1643199386523" duration="964000" />
+      <workItem from="1643343187539" duration="29000" />
+      <workItem from="1643343257983" duration="25000" />
+      <workItem from="1643343291770" duration="1000" />
+      <workItem from="1643546033684" duration="12000" />
+      <workItem from="1643549805823" duration="29000" />
+      <workItem from="1665898718265" duration="12000" />
+      <workItem from="1665898747956" duration="4382000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: remove useless code - node_modules">
+      <created>1643185855498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643185855498</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: update devDependencies">
+      <created>1643185990824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643185990824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: update devDependencies">
+      <created>1643186037557</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643186037557</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add the basic markdown">
+      <created>1643206357489</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643206357489</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../Typescript Best Practices/src/Typeof/main.js" />
+        <option value="$PROJECT_DIR$/../Typescript Best Practices/src/Annotation/main.js" />
+        <option value="$PROJECT_DIR$/../Typescript Best Practices/src/Union Type/main.js" />
+        <option value="$PROJECT_DIR$/../Typescript Best Practices/src/Lookup Type/main.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="35b86fa2-c5b6-4e11-ac91-9315ab7ce0f4">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="35b86fa2-c5b6-4e11-ac91-9315ab7ce0f4" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: remove useless code - node_modules" />
+    <MESSAGE value="feat: update tsconfig.json" />
+    <MESSAGE value="feat: add the basic markdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add the basic markdown" />
+  </component>
+</project>
