@@ -10,16 +10,16 @@ interface Dinner1 {
 //   Awesome!
 type Dinner2 =
   | {
-      fish: number;
-    }
+    fish: number;
+  }
   | {
-      bear: number;
-    };
+    bear: number;
+  };
 
 // 一些区别：
 // 1. Dinner1 对于初始值的限制较弱
-let d1: Dinner1 = {}; // Opps
-d1 = { fish: 1, bear: 1 }; // Opps
+let d1: Dinner1 = {}; // oops
+d1 = { fish: 1, bear: 1 }; // oops
 
 // 1. Dinner2 联合类型此处的初始值无法为空
 // let d2: Dinner2 = {}; // Protected!
