@@ -1,4 +1,5 @@
 // 巧用 @ts-expect-error
+// https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#-ts-expect-error-comments
 
 // 还是类型收窄
 // 你和 API 的同事友好地约定了一个接口: 
