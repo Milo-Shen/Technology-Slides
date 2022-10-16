@@ -6,8 +6,8 @@
 let d1 = {}; // Opps
 d1 = { fish: 1, bear: 1 }; // Opps
 // 1. Dinner2 联合类型此处的初始值无法为空
-let d2 = {}; // Protected!
-// let d2 = { fish: 1, bear: 1 }; // Protected!
+// let d2: Dinner2 = {}; // Protected!
+let d2 = { fish: 1, bear: 1 }; // Protected!
 if ('fish' in d2) {
     // `d2` has `fish` and no `bear` here.
 }
