@@ -1,4 +1,4 @@
-// 巧用Partial
+// 巧用 Partial
 
 const mergeOptions = (options: Opt, patch: Partial<Opt>) => {
     return { ...options, ...patch };
