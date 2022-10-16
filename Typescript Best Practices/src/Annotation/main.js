@@ -1,7 +1,7 @@
 "use strict";
 // 巧用注释
 // 通过/** */形式的注释可以给 TS 类型做标记，编辑器会有更好的提示:
-const p = {
+var p = {
     name: '24',
 };
 // 巧用注释 进阶
@@ -10,4 +10,4 @@ const p = {
  * @deprecated
  * @param a
  */
-const f = (a) => a;
+var f = function (a) { return a; };

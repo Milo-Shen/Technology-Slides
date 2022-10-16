@@ -1,10 +1,7 @@
 "use strict";
-const get = (url) => {
-    return fetch(url).then((res) => res.json());
+var get = function (url) {
+    return fetch(url).then(function (res) { return res.json(); });
 };
 // 上面的定义极大地增强了代码提示:
-get('/user').then(user => user.name);
-get('/menu').then(menu => menu.foods);
-function $(id) {
-    return document.getElementById(id);
-}
+get('/user').then(function (user) { return user.name; });
+get('/menu').then(function (menu) { return menu.foods; });
