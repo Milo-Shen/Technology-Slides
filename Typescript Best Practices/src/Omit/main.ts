@@ -29,3 +29,30 @@ let user_2: UnRegisterArgs = {
 }
 function getUnRegisterArgs(args: UnRegisterArgs) { }
 getUnRegisterArgs(user_2);
+
+// 巧用 Omit + &
+// 有时候，我们希望“继承”一个类型，并且“重写”其中一些属性: 
+type Base = {
+    foo: number;
+    bar: number;
+};
+
+// ❌ Interface 'A' incorrectly extends interface 'Base'.
+// interface A extends Base {
+//     foo: string;
+// };
+
+// ❌ B['foo'] is never.
+// type B = Base & {
+//     foo: string;
+// };
+
+// 可以先 Omit 掉: 
+// https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys
+interface C extends Omit<Base, 'foo'> {
+    foo: string;
+};
+
+type D = Omit<Base, 'foo'> & {
+    foo: string;
+};
