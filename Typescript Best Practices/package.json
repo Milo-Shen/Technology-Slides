@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Typescript-Course",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@tsconfig/recommended": "^1.0.1",
     "prettier": "^2.5.1"
   },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
