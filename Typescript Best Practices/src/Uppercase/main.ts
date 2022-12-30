@@ -1,3 +1,4 @@
+// @ts-ignore
 type Role = 'admin' | 'user' | 'guest';
 
 // Bad practice
