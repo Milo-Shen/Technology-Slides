@@ -10,3 +10,5 @@ type F = Simplify<E>;
 
 function app(arg: E) { }
 function app_simplify(arg: F) { }
+
+// todo: ? 如果实现 Deep Simplify
