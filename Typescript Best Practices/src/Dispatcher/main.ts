@@ -25,3 +25,13 @@ type GetSomeType2<T extends string | number | [string]> = [T] extends string[] ?
 let someTypeFour: GetSomeType2<[string] | number>;
 
 // 分发的具体例子:
+type TypeA = string | number | boolean | symbol;
+type MyExclude<T, K> = T extends K ? never : T;
+// ExcludeSymbolType 类型为 string | number | boolean，排除了symbol类型
+type ExcludeSymbolType = MyExclude<TypeA, symbol | boolean>;
+
+// MyExclude 类型接受两个泛型参数，因为 T extends K ? never : T 中 T 满足裸类型并且在 extends 关键字前。
+// 同时，我们传入的 TypeA 为联合类型，那么满足分发的所有条件。则会产生分发效果，也就是说会将联合类型 TypeA 中所有的单个类型依次进入 T extends K ? never : T; 去判断。
+// 当满足条件时，也就是 T extends symbol | boolean 时，此时会得到 never 。（这里的 never 代表的也就是一个无法达到的类型，不会产生任何效果），自然就会被忽略。
+// 而如果不满足 T extends symbol | boolean 则会被记录，最终返回不满足 T extends symbol | boolean 的所有类型组成的联合类型，也就是所谓的 string | number 。
+// 当然和 Exclude 相反效果的内置类型 Extract、NonNullable也是基于分发实现的，有兴趣的小伙伴可以自行查阅实现。
