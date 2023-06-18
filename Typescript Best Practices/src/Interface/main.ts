@@ -50,3 +50,18 @@ const forEach = <T>(arr: T[], callback: Callback<T>) => {
 // 自然 callback 的 item 也会在定义时被推导为 T 也就是所谓的 string | number 类型
 forEach<string | number>(['1', 2, 3, '4'], (item) => {});
 // 所以，这一点在日常开发中希望小伙伴们一定要特别留意：在泛型接口中泛型的声明位置不同所产生的效果是完全不同的。
+
+// 例子4: 使用 extends 关键字来实现泛型约束
+interface IHasLength {
+    length: number;
+}
+
+// 利用 extends 关键字在声明泛型时约束泛型需要满足的条件
+function getLength<T extends IHasLength>(arg: T) {
+    return arg.length;
+}
+
+getLength([1, 2, 3]); // correct
+getLength('123'); // correct
+getLength({ name: 'Jack', length: 100 }); // correct
+// getLength(true); 因为 boolean 数据没有 length 属性，所以此处不满足泛型约束
