@@ -41,3 +41,6 @@ type MyParameters<T extends (...args: any) => any> = T extends (...args: infer R
 // 那么此时我会返回满足条件的函数推断参数组成的数组也就是 ...args 的类型 R, 否则则返回 never
 // 当然 TS 内部还存在比如 ReturnType 、ThisParameterType 等类型都是基于条件判断中的 infer 来推断出结果的，有兴趣的朋友可以自行查阅
 // 日常工作中, 我们经常会碰到将元祖转化成为联合类型的需求, 比如 ['a',1,true] 我们希望快速得到元组中元素的类型应该如何实现呢 ?
+
+type MyArrType<T extends any[]> = T extends Array<infer R> ? R : never;
+type arrType = MyArrType<['a', 1, true]>;
