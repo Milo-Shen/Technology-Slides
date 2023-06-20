@@ -33,3 +33,25 @@ function resultValueBySome(val: unknown) {
   }
   // ...
 }
+
+// 当然, 在描述了 unknown 类型的含义之后, 关于 unknown 类型有一个特别重要的点我想和大家强调：
+// unknown 类型可以接收任意类型的值，但并不支持将unknown赋值给其他类型
+// any 类型同样支持接收任意类型的值，同时赋值给其他任意类型（除了never）
+// any 和 unknown 都代表任意类型, 但是 unknown 只能接收任意类型的值, 而 any 除了可以接收任意类型的值, 也可以赋值给任意类型（除了 never）
+
+let a4!: any;
+let b4!: unknown;
+
+// 任何类型值都可以赋给any、unknown
+a4 = 1;
+b4 = 1;
+
+// callback函数接受一个类型为number的参数
+function callback(val: number): void {}
+
+// 调用callback传入aaa（any）类型 correct
+callback(a4);
+
+// 调用 callback 传入 b（unknown）类型给 val（number）类型 error
+// ts Error: 类型 “unknown” 的参数不能赋给类型 “number” 的参数
+// callback(b4);
