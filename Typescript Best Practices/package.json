@@ -20,7 +20,8 @@
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@tsconfig/recommended": "^1.0.1",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
     "build": "tsc",
