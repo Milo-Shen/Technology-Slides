@@ -36,4 +36,5 @@
 // /root/src/node_modules/module_b/index.tsx
 // /root/src/node_modules/module_b/index.d.ts
 
-// 此时，TS 仍然会按照 node 的模块解析规则，继续向上进行目录查找，比如又会进入上层目录 /root/node_modules/module_b.ts ...进行查找，直到查找到顶层 node_modules 也就是最后一个查找的路径为 /node_modules/module_b/index.d.ts 如果未找到则会抛出异常 can't find module 'module_b'。
+// 此时，TS 仍然会按照 node 的模块解析规则，继续向上进行目录查找，比如又会进入上层目录 /root/node_modules/module_b.ts ...进行查找，直到查找到顶层 node_modules 也就是最后一个查找的路径为 /node_modules/module_b/index.d.ts 如果未找到则会抛出异常 can't find module 'module_b'
+// 上述查找规则是基于 tsconfig.json 中指定的 moduleResolution:node，当然还有 classic 不过 classic 规则是 TS 为了兼容老旧版本，现代代码中基本可以忽略这个模块查找规则
