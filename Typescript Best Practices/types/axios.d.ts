@@ -12,3 +12,8 @@ export default axios;
 // export namespace 导出（含有子属性的）对象
 // export default ES6 默认导出
 // export = commonjs 导出模块
+
+// export 关键字
+// 需要额外留意的是npm 包的声明文件与全局变量的声明文件有很大区别。
+// 在 npm 包的声明文件中，使用 declare 不再会声明一个全局变量，而只会在当前文件中声明一个局部变量
+// 只有在声明文件中使用 export 导出，然后在使用方 import 导入后，才会应用到这些类型声明
