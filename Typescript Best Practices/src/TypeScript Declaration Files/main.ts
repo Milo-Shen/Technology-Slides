@@ -131,3 +131,12 @@ const my_info: Props = {
   name: 'Milo-Shen',
   age: 18,
 };
+
+// 但是需要注意的是，无论哪种声明合并必须遵循合并的属性的类型必须是唯一的，比如：
+// interface Props {
+//   name: string;
+// }
+// // 后续属性声明必须属于同一类型。属性 “name” 的类型必须为 “string”，但此处却为类型 “18”
+// interface Props {
+//   name: 18;
+// }
