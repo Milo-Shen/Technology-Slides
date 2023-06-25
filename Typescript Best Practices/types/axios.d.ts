@@ -26,7 +26,7 @@ export const name: string;
 // 导出函数
 export function createInstance(): AxiosInstance;
 // 导出接口 接口导出省略 export
-interface AxiosInstance {
+export interface AxiosInstance {
   // ...
   data: any;
 }

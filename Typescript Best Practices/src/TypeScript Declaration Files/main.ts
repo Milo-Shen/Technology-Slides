@@ -167,10 +167,16 @@ const a: axios.Props = {
 // 现在我们假设一种场景下，我们目前使用了 axios 这个库。假设目前这个库并没有对应的类型声明文件，显然当我们在代码中引入这个库时候一定是会报错的。
 // 此时，关于 Npm 包类型的声明会很好的帮助我们来解决这个问题：
 // 首先我们在上述说到的，当我们在代码中执行
-import axios from 'axios'
+import axios from 'axios';
 
 // 它会按照路径依次去查找，正常来说它会去 node_modules 下的各个路径区查找对应的模块。那么我们需要将自定义的声明文件书写在 node_modules 中去吗 ？
 // 这显然是不合理的，因为 node_modules 中的目录是非常不稳定的
 
 // 此时，我们可以首先在 tsconfig.json 中配置对应的 alias 别名配置，达到引入 axios 时自动帮我们找到对应的 .d.ts 文件声明文件：
-import { name } from 'axios';
+import { name, createInstance, AxiosInstance, Axios, Directions } from 'axios';
+// string
+console.log(name);
+// 通过 createInstance 返回 AxiosInstance 实例
+const instance: AxiosInstance = createInstance();
+new Axios('/');
+const direction = Directions.Up;
