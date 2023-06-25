@@ -66,3 +66,41 @@
 // 其实不是这样的，学会类型声明文件的编写并不仅仅是为了编写库声明。大多数时候，我们在日常业务中对于第三方库需要做一些自定一的扩展扩充
 // 大多数时候一些库提供的泛型参数其实并不能很好的满足我们的需求，所以利用 *.d.ts 扩展第三方库在业务中是非常常见的需求
 // 注意，声明文件一定要以 [name].d.ts 结尾
+
+// 比如我们在项目内定义一个 jquery.d.ts 时:
+// src/jQuery.d.ts
+// 定义全局变量 jQuery，它是一个方法
+// declare var jQuery: (selector: string) => any;
+// 之后我们在项目内的 TS 文件中就可以在全局自由的使用声明的 jQuery 了：
+// jQuery('#root')
+// 正常来说，ts 会解析项目中所有的 *.ts 文件，当然也包含以 .d.ts 结尾的文件。所以当我们将 jQuery.d.ts 放到项目中时，其他所有 *.ts 文件就都可以获得 jQuery 的类型定义了
+// 当然，上边我们提过到关于 tsc 文件的编译范围。所以如果找不到情况可以自行检查对应的 files、include 和 exclude 配置
+
+// 全局变量
+// declare var 声明全局变量
+// declare function 声明全局方法
+// declare class 声明全局类
+// declare enum 声明全局枚举类型
+// declare namespace 声明（含有子属性的）全局对象
+// interface 和 type 声明全局类型
+
+// 上述罗列了 6 中全局声明的语句，我们可以通过 declare 关键字结合对应的类型，从而在任意 .d.ts 中进行全局类型的声明
+// 比如我们以 namespace 举例：
+// 假设我们的业务代码中存在一个全局的模块对象 MyLib，它拥有一个名为 makeGreeting 的方法以及一个 numberOfGreetings 数字类型属性。
+// 当我们想在 TS 文件中使用该 global 对象时, TS 会告诉我们找不到 myLib
+// 原因其实非常简单，typescript 文件中本质上是对于我们的代码进行静态类型检查。当我们使用一个没有类型定义的全局变量时，TS 会明确告知找不到该模块。
+
+// 当然，我们可以选择在该文件内部对于该模块进行定义并且进行导出，Like this:
+// export namespace myLib {
+//   export let makeGreeting: (string: string) => string;
+//   export let numberOfGreetings: number;
+// }
+
+let result = myLib.makeGreeting('hello, world');
+console.log('The computed greeting is:' + result);
+let count = myLib.numberOfGreetings;
+
+// 上述的代码的确在模块文件内部定义了一个 myLib 的命名空间，在该文件中我们的确可以正常的使用 myLib
+// 可是，在别的模块文件中我们如果仍要使用 myLib 的话，也就意味着我们需要手动再次 import 该 namespace
+// 这显然是不合理的，所以 TS 为我们提供了全局的文件声明 .d.ts 来解决这个问题
+// 我们可以通过在 ts 的编译范围内声明 [name].d.ts 来定义全局的对象的命名空间。 比如：
