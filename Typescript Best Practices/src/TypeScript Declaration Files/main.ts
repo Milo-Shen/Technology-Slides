@@ -24,3 +24,16 @@
 // 我们可以稍微回想一下平常在 nodejs 中对于非相对导入的模块是如何被 nodejs 解析的。没错，它们的规则大同小异
 // 比如下面这段代码:
 
+// 假设当前文件所在路径为 /root/src/module_a
+// import { b } from 'module_b'
+
+// /root/src/node_modules/module_b.ts
+// /root/src/node_modules/module_b.tsx
+// /root/src/node_modules/module_b.d.ts
+// /root/src/node_modules/module_b/package.json（如果它指定了一个types属性）
+// /root/src/node_modules/@types/module_b.d.ts
+// /root/src/node_modules/module_b/index.ts
+// /root/src/node_modules/module_b/index.tsx
+// /root/src/node_modules/module_b/index.d.ts
+
+// 此时，TS 仍然会按照 node 的模块解析规则，继续向上进行目录查找，比如又会进入上层目录 /root/node_modules/module_b.ts ...进行查找，直到查找到顶层 node_modules 也就是最后一个查找的路径为 /node_modules/module_b/index.d.ts 如果未找到则会抛出异常 can't find module 'module_b'。
