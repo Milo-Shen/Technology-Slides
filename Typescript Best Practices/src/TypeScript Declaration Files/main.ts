@@ -180,3 +180,9 @@ console.log(name);
 const instance: AxiosInstance = createInstance();
 new Axios('/');
 const direction = Directions.Up;
+
+// export default
+// 在 ES6 模块系统中，使用 export default 可以导出一个默认值，使用方可以用 import foo from 'foo' 而不是 import { foo } from 'foo' 来导入这个默认值
+// 同样，在类型声明文件中，我们可以通过 export default 用来导出默认值的类型。比如：
+// export default function axios(): string;
+// 需要额外注意的是只有 function、class 和 interface 可以直接默认导出，其他的变量需要先定义出来，再默认导出

@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "axios": ["types/axios.d.ts"]
+      "axios": ["./types/axios.d.ts"]
     }
   },
   "include": ["src/**/*", "image.d.ts", "MyLib.d.ts"],
