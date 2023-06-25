@@ -18,4 +18,26 @@ export default axios;
 // 在 npm 包的声明文件中，使用 declare 不再会声明一个全局变量，而只会在当前文件中声明一个局部变量
 // 只有在声明文件中使用 export 导出，然后在使用方 import 导入后，才会应用到这些类型声明
 
-// export 的语法与普通的 ts 中的语法类似，需要注意的是d.ts的声明文件中禁止定义具体的实现
+// export 的语法与普通的 ts 中的语法类似，需要注意的是d.ts 的声明文件中禁止定义具体的实现
+// 比如: types/axios/index.d.ts
+
+// 导入变量
+export const name: string;
+// 导出函数
+export function createInstance(): AxiosInstance;
+// 导出接口 接口导出省略 export
+interface AxiosInstance {
+  // ...
+  data: any;
+}
+// 导出 Class
+export class Axios {
+  constructor(baseURL: string);
+}
+// 导出枚举
+export enum Directions {
+  Up,
+  Down,
+  Left,
+  Right,
+}
