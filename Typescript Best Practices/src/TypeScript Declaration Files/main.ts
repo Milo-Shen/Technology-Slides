@@ -109,3 +109,8 @@ let count = myLib.numberOfGreetings;
 //   function makeGreeting(s: string): string;
 //   let numberOfGreetings: number;
 // }
+
+// 可以看到上图的右边，此时当我们使用 myLib 时， TS 可以正确的识别到他是 myLib 的命名空间
+// 如果你的 [name].d.ts 不生效，那么仔细检查你的 tsconfig.json -> include 设置
+// 虽然说随着 ES6 的普及，ts 文件中的 namespace 已经逐渐被淘汰掉了
+// 但是在类型声明文件中使用 declare namespace xxx 声明类似全局对象仍然是非常实用的方法
