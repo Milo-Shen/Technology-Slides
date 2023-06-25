@@ -1,4 +1,4 @@
-// import logo from "./example.svg";
+import logo from './example.svg';
 
 // TypeScript 模块解析规则
 
@@ -104,3 +104,8 @@ let count = myLib.numberOfGreetings;
 // 可是，在别的模块文件中我们如果仍要使用 myLib 的话，也就意味着我们需要手动再次 import 该 namespace
 // 这显然是不合理的，所以 TS 为我们提供了全局的文件声明 .d.ts 来解决这个问题
 // 我们可以通过在 ts 的编译范围内声明 [name].d.ts 来定义全局的对象的命名空间。 比如：
+
+// declare namespace myLib {
+//   function makeGreeting(s: string): string;
+//   let numberOfGreetings: number;
+// }
