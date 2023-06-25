@@ -61,3 +61,5 @@
 // 简单来说，ts 编译器首先会根据 tsconfig.json 中的上述三个字段来加载项目内的 d.ts 全局模块声明文件，自然由于 '.png' 文件会命中全局加载的 image.d.ts 中的 声明的 module 所以会找到对应的文件
 // include 在未指定 file 配置下默认为 **，表示 tsc 解析的目录为当前 tsconfig.json 所在的项目文件夹
 // 关于 file、include、exclude 三者的区别我就不详细展开了，本质上都是针对于 TSC 编译器处理的范围。后续如果大伙有兴趣，我可以单独开一个 tsconfig.json 的文章去详细解释配置
+
+// 详解 typescript 声明文件
