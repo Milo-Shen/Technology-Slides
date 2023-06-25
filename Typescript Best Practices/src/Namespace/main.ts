@@ -1,3 +1,7 @@
+/// <reference path="Validation.ts" />
+/// <reference path="LettersOnlyValidator.ts" />
+/// <reference path="ZipCodeValidator.ts" />
+
 // 使用命名空间的验证器
 
 // Some samples to try
