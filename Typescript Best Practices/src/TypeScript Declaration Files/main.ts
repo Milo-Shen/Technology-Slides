@@ -116,3 +116,18 @@ let count = myLib.numberOfGreetings;
 // 但是在类型声明文件中使用 declare namespace xxx 声明类似全局对象仍然是非常实用的方法
 
 // 声明合并
+// 上边我们讲述了如何在类型声明文件中进行全局变量的声明，接下来其他部分之前我们先来聊聊 TS 中的声明合并
+
+// 接口自动合并
+interface Props {
+  name: string;
+}
+
+interface Props {
+  age: 18;
+}
+
+const my_info: Props = {
+  name: 'Milo-Shen',
+  age: 18,
+};
