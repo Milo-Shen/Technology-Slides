@@ -140,3 +140,23 @@ const my_info: Props = {
 // interface Props {
 //   name: 18;
 // }
+
+// declare 合并
+declare namespace axios {
+  interface Props {
+    name: string;
+  }
+}
+
+declare namespace axios {
+  interface Props {
+    age: string;
+  }
+}
+const a: axios.Props = {
+  name: 'Milo-Shen',
+  age: '12',
+};
+
+// 这里可以看到在右边的声明文件中进行了名为 axios 全局命名空间声明，同时在左边的文件中我们使用了 axios.Props 类型
+// 其实本质上就是相同命名空间内的接口合并，当然我们可以利用 declare 声明合并达到更多的效果。后续我们会详细提到
